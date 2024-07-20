@@ -1,7 +1,8 @@
 package main
 
 import (
-	definitions "chessengine/definitons"
+	"chessengine/bitboards"
+	definitions "chessengine/definitions"
 	"fmt"
 )
 
@@ -24,4 +25,11 @@ func main() {
 		}
 		fmt.Printf("%5d", definitions.Square64To120[i])
 	}
+
+	fmt.Println()
+	fmt.Println()
+
+	num := uint64(1) << definitions.Square120To64[definitions.E4]
+	num |= uint64(1) << definitions.Square120To64[definitions.E5]
+	bitboards.PrintBitBoard(num)
 }

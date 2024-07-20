@@ -5,61 +5,51 @@ const (
 	BoardSize = 120
 )
 
-type Piece int
-
 const (
-	Empty Piece = iota
-	wP          = iota
-	wN          = iota
-	wB          = iota
-	wR          = iota
-	wQ          = iota
-	wK          = iota
-	bP          = iota
-	bN          = iota
-	bB          = iota
-	bR          = iota
-	bQ          = iota
-	bK          = iota
+	Empty = iota
+	wP    = iota
+	wN    = iota
+	wB    = iota
+	wR    = iota
+	wQ    = iota
+	wK    = iota
+	bP    = iota
+	bN    = iota
+	bB    = iota
+	bR    = iota
+	bQ    = iota
+	bK    = iota
 )
 
-type File int
-
 const (
-	FileA    File = iota
-	FileB         = iota
-	FileC         = iota
-	FileD         = iota
-	FileE         = iota
-	FileF         = iota
-	FileG         = iota
-	FileH         = iota
-	FileNone      = iota
+	FileA    = iota
+	FileB    = iota
+	FileC    = iota
+	FileD    = iota
+	FileE    = iota
+	FileF    = iota
+	FileG    = iota
+	FileH    = iota
+	FileNone = iota
 )
 
-type Rank int
-
 const (
-	Rank1    Rank = iota
-	Rank2         = iota
-	Rank3         = iota
-	Rank4         = iota
-	Rank5         = iota
-	Rank6         = iota
-	Rank7         = iota
-	Rank8         = iota
-	RankNone      = iota
+	Rank1    = iota
+	Rank2    = iota
+	Rank3    = iota
+	Rank4    = iota
+	Rank5    = iota
+	Rank6    = iota
+	Rank7    = iota
+	Rank8    = iota
+	RankNone = iota
 )
 
-type Color int
-
 const (
-	White Color = iota
-	Black       = iota
-	Both        = iota
+	White = iota
+	Black = iota
+	Both  = iota
 )
-
-type Square int
 
 const (
 	A1, B1, C1, D1, E1, F1, G1, H1 = iota + 21, iota + 22, iota + 23, iota + 24, iota + 25, iota + 26, iota + 27, iota + 28
@@ -73,13 +63,11 @@ const (
 	NoSquare                       = iota + 91
 )
 
-type Castling int
-
 const (
-	WhiteKingCastle  Castling = iota + 1
-	WhiteQueenCastle          = 2
-	BlackKingCastle           = 4
-	BlackQueenCastle          = 8
+	WhiteKingCastle  = iota + 1
+	WhiteQueenCastle = 2
+	BlackKingCastle  = 4
+	BlackQueenCastle = 8
 )
 
 var Square120To64 = [BoardSize]int{}
